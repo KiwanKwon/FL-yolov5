@@ -33,5 +33,3 @@
 2. To run federated learning:
    ```bash
    python global_server.py
-
-
