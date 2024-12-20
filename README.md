@@ -10,16 +10,28 @@
    git clone https://github.com/ultralytics/yolov5
 
 2. Navigate to the YOLOv5 directory and create a new Conda environment:
+   ```bash
    cd yolov5
    conda create --name yolo python=3.8
 
-3. Activate the Conda environment:
+4. Activate the Conda environment:
+   ```bash
    conda activate yolo
 
-4. Install the required dependencies:
+6. Install the required dependencies:
+   ```bash
    pip install -r requirements.txt
 
-5. python train.py --data /path/to/your/datasets/datasets.yaml --weights yolov5s.pt --img 640 --batch 16 --epochs 10 --name cl
+## Training
+### Centralized Learning (CL)
+1. To train the model with centralized learning:
+   ```bash
+   python train.py --data /path/to/your/datasets/datasets.yaml --weights yolov5s.pt --img 640 --batch 16 --epochs 10 --name cl
+   #Replace /path/to/your/datasets/datasets.yaml with the actual path to your dataset configuration file.
 
+### Federated Learning (FL)
+2. To run federated learning:
+   ```bash
+   python global_server.py
 
 
