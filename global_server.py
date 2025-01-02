@@ -6,7 +6,7 @@ from utils.torch_utils import select_device
 import torch
 from models.yolo import Model
 from utils.general import intersect_dicts
-ROOT_DIR = '/home/elicer'
+ROOT_DIR = '/change/to/your/dir/plz'
 YOLO_DIR = os.path.join(ROOT_DIR, "yolov5")
 TRAIN_FOLDER = os.path.join(ROOT_DIR,"yolov5", "training", "federated_even_distributed")
 CLIENT_NUM = 5
