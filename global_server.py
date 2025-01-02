@@ -10,7 +10,8 @@ ROOT_DIR = '/home/elicer'
 YOLO_DIR = os.path.join(ROOT_DIR, "yolov5")
 TRAIN_FOLDER = os.path.join(ROOT_DIR,"yolov5", "training", "federated_even_distributed")
 CLIENT_NUM = 5
-ROUNDS = 50 #기존 300번
+ROUNDS = 50 # optional
+
 AGGRE_FOLDER = os.path.join(TRAIN_FOLDER, "aggregated")
 
 def getLastAggModel():
@@ -104,6 +105,10 @@ if __name__ == "__main__":
 
        print("<Round {} finished>".format(i))
 
+
+
+
+#optional
 #import torch.multiprocessing as mp
 #from concurrent.futures import ThreadPoolExecutor
 
@@ -149,8 +154,8 @@ if __name__ == "__main__":
 #                 p.close()
 
 
-#         # 여기까지 okay
+#         
 #         FedAvg(round_num)
-#         # 여기까지도 okay => for loop를 돌면서 문제가 있는 것 같다. 
+#          
         
 #         print(f"<Round {round_num + 1} finished>")
